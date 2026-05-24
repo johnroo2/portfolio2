@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
         technologies: ['Rust', 'JavaScript', 'WebGL'],
         description: (
             <p>
-                A feature-rich, high-performance graphing library with built-in async support built with <span className='font-semibold'>Rust</span> and <span className='font-semibold'>WebGL</span> that 
+                A feature-rich, high-performance graphing library built in <span className='font-semibold'>Rust</span> and <span className='font-semibold'>WebGL</span> that 
                 I contributed to while working at <a href='https://www.windbornesystems.com/' target='_blank' rel='noopener noreferrer' className='hover:text-accent font-semibold hover:ul-style'>WindBorne Systems</a>.
             </p>
         ),
