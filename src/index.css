@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("/fonts/raleway/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/fonts/inconsolata/Inconsolata-VariableFont.ttf") format("truetype");
+  font-weight: 200 900;
+  font-stretch: 50% 200%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-raleway: "Raleway", ui-sans-serif, system-ui, sans-serif;
+  --font-inconsolata: "Inconsolata", ui-monospace, monospace;
+  --font-sans: var(--font-raleway);
+  --font-mono: var(--font-inconsolata);
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  --color-faded: var(--faded);
+  --color-accent: var(--accent);
+}
+
+:root {
+  color-scheme: light;
+  --bg: oklch(0.9803 0.0189 106.93);
+  --fg: oklch(0.2236 0.0084 240.27);
+  --faded: oklch(0.5099 0.0068 229.07);
+  --accent: oklch(0.6539 0.1202 170); 
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: oklch(0.2135 0.0085 223.89);
+  --fg: oklch(0.9471 0.0109 182.87);
+  --faded: oklch(0.789 0.008 177.31); 
+  --accent: oklch(0.6539 0.1202 213.35); 
+}
+
+@utility ul-style {
+  @apply underline decoration-dashed decoration-1 underline-offset-3;
+}
+
+@utility list-hollow {
+  list-style-type: circle;
+}
+
+@utility row-aside {
+  @apply text-faded font-inconsolata lg:ml-auto lg:shrink-0 max-lg:-mt-1.5 text-sm;
+}
+
+@layer base {
+  html {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  body {
+    @apply min-h-screen;
+  }
+}
