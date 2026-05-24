@@ -11,7 +11,7 @@ export function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={`Switch to ${isDark ? 'light' : 'dark'}`}
-      className="p-2 hover:bg-faded/8"
+      className="p-2 hover:bg-faded/8 text-faded"
     >
       <Icon className="size-4" />
     </button>

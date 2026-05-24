@@ -13,7 +13,7 @@ export function HomePage(){
                 </a>.
             </p>
             <p>
-            I&apos;m interested in solving puzzles, and building performant systems, and fullstack web development. 
+            I&apos;m interested in solving puzzles, building performant systems, and fullstack web development. 
             </p>
         </>
     )

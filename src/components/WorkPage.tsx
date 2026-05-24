@@ -1,11 +1,12 @@
 import { WORK_EXPERINCE } from '@/data'
 import { CompanyLogo } from '@/components/CompanyLogo'
+import { MapPinIcon } from 'lucide-react'
 
 export function WorkPage() {
   return (
     <div className='space-y-6'>
       {WORK_EXPERINCE.map((work) => (
-        <div key={work.company} className='company-hover flex gap-3 items-start'>
+        <div key={work.company} className='company-hover flex max-lg:flex-col gap-3 items-start'>
           <a
             href={work.companyLink}
             target='_blank'
@@ -18,7 +19,7 @@ export function WorkPage() {
               darkInvert={work.logoDarkInvert}
             />
           </a>
-          <div className='grow min-w-0 space-y-3'>
+          <div className='grow min-w-0 space-y-1.5'>
             <div className='flex flex-col gap-1.5 lg:flex-row lg:items-center lg:gap-4'>
               <a
                 href={work.companyLink}
@@ -26,11 +27,12 @@ export function WorkPage() {
                 rel='noopener noreferrer'
                 className='company-link min-w-0'
               >
-                <h2 className='company-title text-xl font-semibold font-inconsolata max-lg:whitespace-normal whitespace-nowrap'>
+                <h2 className='company-title text-xl font-semibold max-lg:whitespace-normal whitespace-nowrap'>
                   {work.company}
                 </h2>
               </a>
-              <p className='row-aside'>
+              <p className='row-aside flex items-center gap-2'>
+                <MapPinIcon className='size-3 fill-faded/8 max-lg:hidden' />
                 {work.location}
               </p>
             </div>
@@ -40,7 +42,7 @@ export function WorkPage() {
                   key={instance.subtitle}
                   className='flex flex-col gap-0.5 lg:flex-row lg:items-center lg:gap-4'
                 >
-                  <p className='font-inconsolata min-w-0 max-lg:whitespace-normal whitespace-nowrap lg:grow'>
+                  <p className='min-w-0 max-lg:whitespace-normal max-lg:text-sm max-lg:tracking-tighter whitespace-nowrap lg:grow'>
                     {instance.subtitle}
                   </p>
                   <p className='row-aside'>
@@ -49,17 +51,17 @@ export function WorkPage() {
                 </div>
               ))}
             </div>
-            {work.bullets.length > 0 && (
-              <ul className='list-hollow list-outside ml-5 space-y-1.5'>
+            {/* {work.bullets.length > 0 && (
+              <ul className='list-hollow list-outside ml-5 max-lg:text-sm space-y-1.5'>
                 {work.bullets.map((bullet, index) => (
                   <li key={`${work.company}-${index}`}>
                     {bullet.type === 'string' ? bullet.content : bullet.node}
                   </li>
                 ))}
               </ul>
-            )}
+            )} */}
             {work.technologies.length > 0 && (
-              <p className='text-faded font-inconsolata grow'>
+              <p className='text-faded grow max-lg:text-sm'>
                 {work.technologies.join(' • ')}
               </p>
             )}

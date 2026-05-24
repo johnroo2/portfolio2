@@ -30,9 +30,9 @@ export function Layout({ page, children }: LayoutProps) {
   const tabData = TAB_DATA.find((tab) => tab.tab === page)!
 
   return (
-    <main className="relative h-full max-w-4xl mx-auto p-12 space-y-6">
-      <nav className="flex items-center gap-4 px-3 py-1.5 border border-faded/40 w-full">
-        <div className="grow flex items-center font-inconsolata gap-2">
+    <main className="relative h-full max-w-4xl mx-auto p-6 lg:p-12 space-y-6">
+      <nav className="flex items-center gap-2 lg:gap-4 px-2 lg:px-3 py-0.5 lg:py-1.5 border border-faded/40 w-full">
+        <div className="grow flex items-center gap-2">
           {TAB_DATA.map((tab) => (
             <a
               key={tab.tab}
@@ -49,17 +49,17 @@ export function Layout({ page, children }: LayoutProps) {
         </div>
         <ThemeToggle />
       </nav>
-      <div className="px-3 space-y-3">
-        <div className="flex items-center gap-4">
+      <div className="lg:px-3 space-y-3">
+        <div className="flex max-lg:flex-col max-lg:items-start items-center gap-4">
           <div className="flex flex-col grow">
-            <h1 className="text-3xl font-semibold font-inconsolata whitespace-nowrap">
+            <h1 className="text-2xl lg:text-3xl font-semibold whitespace-nowrap">
               {tabData.header}
             </h1>
             <ConsoleTypedText text={tabData.subtitle} />
           </div>
           {page === Tab.HOME && (
             <div
-              className="flex items-center justify-end font-inconsolata flex-wrap"
+              className="flex items-center justify-end flex-wrap"
               style={{ columnGap: '1rem' }}
             >
               {SUBTITLE_LINKS.map(({ link, title }) => (
@@ -72,7 +72,7 @@ export function Layout({ page, children }: LayoutProps) {
         </div>
         {children}
       </div>
-      <footer className="px-4 pt-6 mt-12 text-sm text-faded font-inconsolata border-t border-faded/40">
+      <footer className="lg:px-4 pt-6 mt-6 text-sm text-faded border-t border-faded/40">
         © 2026 John Liu
       </footer>
     </main>

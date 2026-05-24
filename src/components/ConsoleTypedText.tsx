@@ -31,7 +31,7 @@ export function ConsoleTypedText({
   }, [text, speed])
 
   return (
-    <p className={classNames('text-base text-faded font-inconsolata', className)}>
+    <p className={classNames('text-sm lg:text-base text-faded', className)}>
       &gt; {displayed}
     </p>
   )

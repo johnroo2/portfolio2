@@ -12,9 +12,9 @@ export const TAB_DATA: {
   header: string
   subtitle: string
 }[] = [
-{ tab: Tab.HOME, title: '~/', header: 'John Liu', subtitle: 'Hi, nice to meet you!' },
-  { tab: Tab.WORK, title: 'work', header: 'Work', subtitle: "These are some of the places I've worked at." },
-  { tab: Tab.PROJECTS, title: 'projects', header: 'Projects', subtitle: "These are some of the things I've built." },
+{ tab: Tab.HOME, title: '~/', header: 'John Liu', subtitle: 'hi, nice to meet you!' },
+  { tab: Tab.WORK, title: 'work', header: 'Work', subtitle: "these are some of the places i've worked at." },
+  { tab: Tab.PROJECTS, title: 'projects', header: 'Projects', subtitle: "this is some of the stuff i've been working on." },
 ]
 
 export const SUBTITLE_LINKS: {
@@ -57,80 +57,77 @@ type Project = {
     link?: string,
     date: string,
     technologies: string[],
-    bullets: Bullet[],
+    description: React.ReactNode,
 }
 
 export const PROJECTS: Project[] = [
+    {
+        name: '@windborne/grapher',
+        link: 'https://www.npmjs.com/package/@windborne/grapher',
+        date: '09 / 2025',
+        technologies: ['Rust', 'JavaScript', 'WebGL'],
+        description: (
+            <p>
+                A feature-rich, high-performance graphing library with built-in async support built with <span className='font-semibold'>Rust</span> and <span className='font-semibold'>WebGL</span> that 
+                I contributed to while working at <a href='https://www.windbornesystems.com/' target='_blank' rel='noopener noreferrer' className='hover:text-accent font-semibold hover:ul-style'>WindBorne Systems</a>.
+            </p>
+        ),
+    },
     {
         name: 'Marble Investments',
         link: 'https://www.marbleinvestments.ca/',
         date: '01 / 2024',
         technologies: ['Next.js', 'React', 'MongoDB'],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Created a web application for a mutual fund that has handled over <span className='font-semibold'>$125k</span> in total and streamlined transactions through <span className='font-semibold'>Stripe API</span>, secured user data using <span className='font-semibold'>elliptic curve cryptography</span>
-                    </p>
-                ),
-            },
-        ],
+        description: (
+            <p>
+                A web application for a mutual fund with over <span className='font-semibold'>$125k</span> in streamlined transactions, built on the <span className='font-semibold'>Stripe API</span> with elliptic curve encryption for user data.
+            </p>
+        ),
+    },
+    {
+        name: 'Firepit',
+        date: '02 / 2025',
+        link: 'https://www.firepit.link/',
+        technologies: ['React', 'Express', 'OpenAPI'],
+        description: (
+            <p>
+                A <span className='font-semibold'>React + Express</span> coworking webapp where people screenshare what they&apos;re working on, with type-safe <span className='font-semibold'>OpenAPI</span> clients for live socket events and API calls.
+            </p>
+        ),
     },
     {
         name: 'Unfollowed.lol',
         link: 'https://unfollowed.lol',
         date: '04 / 2024',
         technologies: ['TypeScript', 'Supabase', 'Django', 'Postgres', 'GraphQL'],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Built a chrome extension using <span className='font-semibold'>JavaScript</span>, <span className='font-semibold'>Django</span>, and <span className='font-semibold'>Supabase</span> to track marketing analytics and launched on Product Hunt with a <span className='font-semibold'>#8 daily placement</span> and <span className='font-semibold'>100+ votes</span> with <span className='font-semibold'>4000+ daily active users</span>
-                    </p>
-                ),
-            },
-        ],
+        description: (
+            <p>
+                A Chrome extension for tracking marketing analytics that reached <span className='font-semibold'>#8</span> on Product Hunt with <span className='font-semibold'>100+</span> upvotes and <span className='font-semibold'>4000+</span> daily active users.
+            </p>
+        ),
     },
     {
         name: 'Retrospect',
         date: '07 / 2024',
+        link: 'https://www.retrospect.space/',
         technologies: ['Swift', 'Go', 'Google Cloud'],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Developed an app for creating and sharing digital time capsules using <span className='font-semibold'>Swift</span>, <span className='font-semibold'>Go</span>, and <span className='font-semibold'>Google Cloud</span> buckets for storage, implemented a social graph to improve user retention
-                    </p>
-                ),
-            },
-        ],
+        description: (
+            <p>
+                An app for creating and sharing digital time capsules, with media stored in <span className='font-semibold'>Google Cloud</span> buckets and a social graph for discovery between friends.
+            </p>
+        ),
     },
-    {
-        name: 'Firepit',
-        date: '02 / 2025',
-        technologies: ['React', 'Express', 'OpenAPI'],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Built a <span className='font-semibold'>React + Express</span> webapp to make coworking more focused by having users screenshare what they&apos;re working on.
-                    </p>
-                ),
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Implemented type-safe clients for socket events and API calls using <span className='font-semibold'>OpenAPI</span> and <span className='font-semibold'>quicktype</span>, improving reliability and dev experience.
-                    </p>
-                ),
-            },
-        ],
-    },
+    // {
+    //     name: 'Darkest Dungeons',
+    //     date: '02 / 2023',
+    //     link: 'https://github.com/johnroo2/Darkest-Dungeons',
+    //     technologies: ['Java', 'Swing Graphics'],
+    //     description: (
+    //         <p>
+    //             A dungeon explorer, bullet hell roguelike game built in <span className='font-semibold'>Java</span> with <span className='font-semibold'>Swing Graphics</span>.
+    //         </p>
+    //     )
+    // }
 ]
 
 export const WORK_EXPERINCE: Experience[] = [
@@ -139,7 +136,7 @@ export const WORK_EXPERINCE: Experience[] = [
         companyLink: 'https://www.figma.com/',
         logo: '/logos/figma.svg',
         logoDarkInvert: true,
-        location: 'San Francisco, California, United States',
+        location: 'San Francisco, California',
         instances: [
             {
                 subtitle: 'Software Engineer - Design Systems Editor',
@@ -156,7 +153,7 @@ export const WORK_EXPERINCE: Experience[] = [
         companyLink: 'https://www.windbornesystems.com/',
         logo: '/logos/windborne.svg',
         logoDarkInvert: true,
-        location: 'Palo Alto, California, United States',
+        location: 'Palo Alto, California',
         instances: [
             {
                 subtitle: 'Software Engineer - Product Engineering',
@@ -203,7 +200,7 @@ export const WORK_EXPERINCE: Experience[] = [
         company: 'CIBC',
         companyLink: 'https://cibc.com/',
         logo: '/logos/cibc.svg',
-        location: 'Toronto, Ontario, Canada',
+        location: 'Toronto, Ontario',
         instances: [
             {
                 subtitle: 'Software Engineer - Advanced Analytics & AI',
@@ -246,7 +243,7 @@ export const WORK_EXPERINCE: Experience[] = [
         company: 'Slime Scholars',
         companyLink: 'https://slimescholars.com/',
         logo: '/logos/slime-scholars.png',
-        location: 'Waterloo, Ontario, Canada',
+        location: 'Waterloo, Ontario',
         instances: [
             {
                 subtitle: 'Software Engineer',

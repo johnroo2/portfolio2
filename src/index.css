@@ -39,6 +39,7 @@
 }
 
 :root {
+  font-family: var(--font-inconsolata);
   color-scheme: light;
   --bg: oklch(0.9803 0.0189 106.93);
   --fg: oklch(0.2236 0.0084 240.27);
@@ -63,7 +64,7 @@
 }
 
 @utility row-aside {
-  @apply text-faded font-inconsolata lg:ml-auto lg:shrink-0 max-lg:-mt-1.5 text-sm;
+  @apply text-faded lg:ml-auto lg:shrink-0 max-lg:-mt-1.5 text-sm;
 }
 
 @utility company-hover {
