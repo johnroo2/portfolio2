@@ -1,19 +1,29 @@
 import classNames from 'classnames'
-import type { ReactNode } from 'react'
+import type { MouseEvent, ReactNode } from 'react'
 import { SUBTITLE_LINKS, Tab, TAB_DATA } from '../data'
+import { navigate, PAGE_PATHS } from '../lib/pages'
 import { ConsoleTypedText } from './ConsoleTypedText'
 import { SubtitleLink } from './SubtitleLink'
 import { ThemeToggle } from './ThemeToggle'
 
-const PAGE_PATHS: Record<Tab, string> = {
-  [Tab.HOME]: '/',
-  [Tab.WORK]: '/work.html',
-  [Tab.PROJECTS]: '/project.html',
-}
-
 type LayoutProps = {
   page: Tab
   children: ReactNode
+}
+
+function handleNavClick(event: MouseEvent<HTMLAnchorElement>, path: string) {
+  if (
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey ||
+    event.button !== 0
+  ) {
+    return
+  }
+
+  event.preventDefault()
+  navigate(path)
 }
 
 export function Layout({ page, children }: LayoutProps) {
@@ -27,6 +37,7 @@ export function Layout({ page, children }: LayoutProps) {
             <a
               key={tab.tab}
               href={PAGE_PATHS[tab.tab]}
+              onClick={(event) => handleNavClick(event, PAGE_PATHS[tab.tab])}
               className={classNames('px-4 py-0.5', {
                 'bg-faded/8 ul-style': page === tab.tab,
                 'hover:bg-faded/8': page !== tab.tab,

@@ -3,12 +3,11 @@ import { Layout } from './components/Layout'
 import { ProjectPage } from './components/ProjectPage'
 import { WorkPage } from './components/WorkPage'
 import { Tab } from './data'
+import { usePage } from './hooks/usePage'
 
-type AppProps = {
-  page: Tab
-}
+export default function App() {
+  const page = usePage()
 
-export default function App({ page }: AppProps) {
   return (
     <Layout page={page}>
       {page === Tab.HOME && <HomePage />}
