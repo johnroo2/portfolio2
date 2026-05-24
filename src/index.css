@@ -66,6 +66,12 @@
   @apply text-faded font-inconsolata lg:ml-auto lg:shrink-0 max-lg:-mt-1.5 text-sm;
 }
 
+@utility company-hover {
+  &:has(.company-link:hover) .company-title {
+    @apply text-accent ul-style;
+  }
+}
+
 @layer base {
   html {
     @apply bg-background text-foreground font-sans antialiased;
