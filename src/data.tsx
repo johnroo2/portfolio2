@@ -27,6 +27,39 @@ export const SUBTITLE_LINKS: {
   { link: '/assets/resume.pdf', title: 'resume' },
 ]
 
+export const HOME_META_DESCRIPTION =
+  "I'm studying computer science at the University of Waterloo, and I'm currently based in San Francisco working on rendering / editor infrastructure for design systems at Figma. I'm interested in solving puzzles, building performant systems, and fullstack web development."
+
+export const HOME_CONTENT: React.ReactNode = (
+  <>
+    <p>
+      I&apos;m studying computer science at{' '}
+      <a
+        className='hover:text-accent font-semibold hover:ul-style'
+        href='https://uwaterloo.ca/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        University of Waterloo
+      </a>
+      , and I&apos;m currently based in <span className='font-semibold'>San Francisco</span> working
+      on rendering / editor infrastructure for design systems at{' '}
+      <a
+        className='hover:text-accent font-semibold hover:ul-style'
+        href='https://www.figma.com/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        Figma
+      </a>
+      .
+    </p>
+    <p>
+      I&apos;m interested in solving puzzles, building performant systems, and fullstack web development.
+    </p>
+  </>
+)
+
 type Bullet = {
     type: 'string',
     content: string,
