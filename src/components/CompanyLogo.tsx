@@ -18,7 +18,7 @@ export function CompanyLogo({
       src={src}
       alt={alt}
       className={classNames(
-        'h-4 w-auto max-w-12 shrink-0 object-contain',
+        'size-4 shrink-0 object-contain',
         darkInvert && 'dark:invert',
         className,
       )}
