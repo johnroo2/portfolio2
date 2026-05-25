@@ -35,17 +35,17 @@ export const HOME_CONTENT: React.ReactNode = (
     <p>
       I&apos;m studying computer science at{' '}
       <a
-        className='hover:text-accent font-semibold hover:ul-style'
+        className='hover:text-accent font-bold ul-style'
         href='https://uwaterloo.ca/'
         target='_blank'
         rel='noopener noreferrer'
       >
         University of Waterloo
       </a>
-      , and I&apos;m currently based in <span className='font-semibold'>San Francisco</span> working
+      , and I&apos;m currently based in <span className='font-bold'>San Francisco</span> working
       on rendering / editor infrastructure for design systems at{' '}
       <a
-        className='hover:text-accent font-semibold hover:ul-style'
+        className='hover:text-accent font-bold ul-style'
         href='https://www.figma.com/'
         target='_blank'
         rel='noopener noreferrer'
@@ -101,8 +101,8 @@ export const PROJECTS: Project[] = [
         technologies: ['Rust', 'JavaScript', 'WebGL'],
         description: (
             <p>
-                A feature-rich, high-performance graphing library built in <span className='font-semibold'>Rust</span> and <span className='font-semibold'>WebGL</span> that 
-                I contributed to while working at <a href='https://www.windbornesystems.com/' target='_blank' rel='noopener noreferrer' className='hover:text-accent font-semibold hover:ul-style'>WindBorne Systems</a>.
+                A feature-rich, high-performance graphing library built in <span className='font-bold'>Rust</span> and <span className='font-bold'>WebGL</span> that 
+                I contributed to while working at <a href='https://www.windbornesystems.com/' target='_blank' rel='noopener noreferrer' className='hover:text-accent font-bold hover:ul-style'>WindBorne Systems</a>.
             </p>
         ),
     },
@@ -113,43 +113,43 @@ export const PROJECTS: Project[] = [
         technologies: ['Next.js', 'React', 'MongoDB'],
         description: (
             <p>
-                A web application for a mutual fund with over <span className='font-semibold'>$125k</span> in streamlined transactions, built on the <span className='font-semibold'>Stripe API</span> with elliptic curve encryption for user data.
+                A web application for a mutual fund with over <span className='font-bold'>$125k</span> in streamlined transactions, built on the <span className='font-bold'>Stripe API</span> with elliptic curve encryption for user data.
             </p>
         ),
     },
     {
         name: 'Firepit',
         date: '02 / 2025',
-        link: 'https://www.firepit.link/',
+        link: 'https://github.com/jiayishen21/firepit/',
         technologies: ['React', 'Express', 'OpenAPI'],
         description: (
             <p>
-                A <span className='font-semibold'>React + Express</span> coworking webapp where people screenshare what they&apos;re working on, with type-safe <span className='font-semibold'>OpenAPI</span> clients for live socket events and API calls.
+                A <span className='font-bold'>React + Express</span> coworking webapp where people screenshare what they&apos;re working on, with type-safe <span className='font-bold'>OpenAPI</span> clients for live socket events and API calls.
             </p>
         ),
     },
     {
         name: 'Unfollowed.lol',
-        link: 'https://unfollowed.lol',
+        link: 'https://github.com/TenacityLabs/unfollowed.lol/',
         date: '04 / 2024',
         technologies: ['TypeScript', 'Supabase', 'Django', 'Postgres', 'GraphQL'],
         description: (
             <p>
-                A Chrome extension for tracking marketing analytics that reached <span className='font-semibold'>#8</span> on Product Hunt with <span className='font-semibold'>100+</span> upvotes and <span className='font-semibold'>4000+</span> daily active users.
+                A Chrome extension for tracking marketing analytics that reached <span className='font-bold'>#8</span> on Product Hunt with <span className='font-bold'>100+</span> upvotes and <span className='font-bold'>4000+</span> daily active users.
             </p>
         ),
     },
-    {
-        name: 'Retrospect',
-        date: '07 / 2024',
-        link: 'https://www.retrospect.space/',
-        technologies: ['Swift', 'Go', 'Google Cloud'],
-        description: (
-            <p>
-                An app for creating and sharing digital time capsules, with media stored in <span className='font-semibold'>Google Cloud</span> buckets and a social graph for discovery between friends.
-            </p>
-        ),
-    },
+    // {
+    //     name: 'Retrospect',
+    //     date: '07 / 2024',
+    //     link: 'https://www.retrospect.space/',
+    //     technologies: ['Swift', 'Go', 'Google Cloud'],
+    //     description: (
+    //         <p>
+    //             An app for creating and sharing digital time capsules, with media stored in <span className='font-bold'>Google Cloud</span> buckets and a social graph for discovery between friends.
+    //         </p>
+    //     ),
+    // },
     // {
     //     name: 'Darkest Dungeons',
     //     date: '02 / 2023',
@@ -157,7 +157,7 @@ export const PROJECTS: Project[] = [
     //     technologies: ['Java', 'Swing Graphics'],
     //     description: (
     //         <p>
-    //             A dungeon explorer, bullet hell roguelike game built in <span className='font-semibold'>Java</span> with <span className='font-semibold'>Swing Graphics</span>.
+    //             A dungeon explorer, bullet hell roguelike game built in <span className='font-bold'>Java</span> with <span className='font-bold'>Swing Graphics</span>.
     //         </p>
     //     )
     // }
@@ -204,8 +204,8 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Owned full-stack development of an AI-powered forecasting insights platform <span className='font-semibold'>(TypeScript, React, Rails)</span> used 
-                        by energy and commodities traders; contributed to <span className='font-semibold'>$2.5M+ ARR</span> within 4 months of launch
+                        Owned full-stack development of an AI-powered forecasting insights platform <span className='font-bold'>(TypeScript, React, Rails)</span> used 
+                        by energy and commodities traders; contributed to <span className='font-bold'>$2.5M+ ARR</span> within 4 months of launch
                     </p>
                 )
             },
@@ -213,7 +213,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Engineered a tropical cyclone tracking pipeline by designing storm detection algorithms in <span className='font-semibold'>C++</span> over <span className='font-semibold'>500TB+</span> of global gridded weather data; built a caching layer in <span className='font-semibold'>Rust</span> enabling low-latency retrieval
+                        Engineered a tropical cyclone tracking pipeline by designing storm detection algorithms in <span className='font-bold'>C++</span> over <span className='font-bold'>500TB+</span> of global gridded weather data; built a caching layer in <span className='font-bold'>Rust</span> enabling low-latency retrieval
                     </p>
                 )
             },
@@ -221,7 +221,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                         Integrated <span className='font-semibold'>LangGraph</span>-based, tool-using LLM agents to generate automated meteorological + commodity
+                         Integrated <span className='font-bold'>LangGraph</span>-based, tool-using LLM agents to generate automated meteorological + commodity
                          event insights; shipped a conversational UI with forecast-aware actions and internal tooling
                     </p>
                 )
@@ -246,7 +246,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Built real-time chatbot features using <span className='font-semibold'>Python</span>, <span className='font-semibold'>Redis</span>, and <span className='font-semibold'>WebSocket</span> streaming, enabling low-latency tool
+                        Built real-time chatbot features using <span className='font-bold'>Python</span>, <span className='font-bold'>Redis</span>, and <span className='font-bold'>WebSocket</span> streaming, enabling low-latency tool
                         execution and interactive user experiences for CIBC's internal AI assistant
                     </p>
                 )
@@ -255,7 +255,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Delivered LLM-powered capabilities including live news ingestion, <span className='font-semibold'>RAG</span> over patent databases, and
+                        Delivered LLM-powered capabilities including live news ingestion, <span className='font-bold'>RAG</span> over patent databases, and
                         sentiment classification for document triage and automated summarization
                     </p>
                 )
@@ -264,7 +264,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                       Architected a full-stack LLM prototyping framework (<span className='font-semibold'>Next.js</span>, <span className='font-semibold'>Prisma</span>, <span className='font-semibold'>FastAPI</span>) adopted across <span className='font-semibold'>10+ internal
+                       Architected a full-stack LLM prototyping framework (<span className='font-bold'>Next.js</span>, <span className='font-bold'>Prisma</span>, <span className='font-bold'>FastAPI</span>) adopted across <span className='font-bold'>10+ internal
                        repositories</span>, standardizing deployment and evaluation workflows
                     </p>
                 )
@@ -289,7 +289,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Spearheaded full-stack development of a gamified education platform specializing in combining learning with video games, built with <span className='font-semibold'>Next.js</span>, <span className='font-semibold'>React</span>, <span className='font-semibold'>MongoDB</span>, and <span className='font-semibold'>AWS</span>; contributed to <span className='font-semibold'>$85k</span> total raised as of Jul. 2024.
+                        Spearheaded full-stack development of a gamified education platform specializing in combining learning with video games, built with <span className='font-bold'>Next.js</span>, <span className='font-bold'>React</span>, <span className='font-bold'>MongoDB</span>, and <span className='font-bold'>AWS</span>; contributed to <span className='font-bold'>$85k</span> total raised as of Jul. 2024.
                     </p>
                 )
             },
@@ -297,7 +297,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Developed a real-time matchmaking system to gamify learning through competitions, utilizing <span className='font-semibold'>cron jobs</span> and <span className='font-semibold'>aggregate queries</span> to match student teams based on size and skill level.
+                        Developed a real-time matchmaking system to gamify learning through competitions, utilizing <span className='font-bold'>cron jobs</span> and <span className='font-bold'>aggregate queries</span> to match student teams based on size and skill level.
                     </p>
                 )
             },
@@ -305,7 +305,7 @@ export const WORK_EXPERINCE: Experience[] = [
                 type: 'node',
                 node: (
                     <p>
-                        Designed and implemented a parsing algorithm for a lesson editor capable of handling XML-like strings, <span className='font-semibold'>LaTeX</span> formats, and various forms of media, significantly improving lesson-writing efficiency.
+                        Designed and implemented a parsing algorithm for a lesson editor capable of handling XML-like strings, <span className='font-bold'>LaTeX</span> formats, and various forms of media, significantly improving lesson-writing efficiency.
                     </p>
                 )
             }
