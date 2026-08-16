@@ -229,87 +229,87 @@ export const WORK_EXPERINCE: Experience[] = [
         ],
         technologies: ['Ruby on Rails', 'Rust', 'C++', 'React.js', 'TypeScript', 'Python'],
     },
-    {
-        company: 'CIBC',
-        companyLink: 'https://cibc.com/',
-        logo: '/logos/cibc.svg',
-        location: 'Toronto, Ontario',
-        instances: [
-            {
-                subtitle: 'Software Engineer - Advanced Analytics & AI',
-                startDate: '01 / 2025',
-                endDate: '04 / 2025',
-            },
-        ],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Built real-time chatbot features using <span className='font-bold'>Python</span>, <span className='font-bold'>Redis</span>, and <span className='font-bold'>WebSocket</span> streaming, enabling low-latency tool
-                        execution and interactive user experiences for CIBC's internal AI assistant
-                    </p>
-                )
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Delivered LLM-powered capabilities including live news ingestion, <span className='font-bold'>RAG</span> over patent databases, and
-                        sentiment classification for document triage and automated summarization
-                    </p>
-                )
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                       Architected a full-stack LLM prototyping framework (<span className='font-bold'>Next.js</span>, <span className='font-bold'>Prisma</span>, <span className='font-bold'>FastAPI</span>) adopted across <span className='font-bold'>10+ internal
-                       repositories</span>, standardizing deployment and evaluation workflows
-                    </p>
-                )
-            }
-        ],
-        technologies: ['Python', 'Azure Web Services', 'PostgreSQL', 'React.js', 'Django'],
-    },
-    {
-        company: 'Slime Scholars',
-        companyLink: 'https://slimescholars.com/',
-        logo: '/logos/slime-scholars.png',
-        location: 'Waterloo, Ontario',
-        instances: [
-            {
-                subtitle: 'Software Engineer',
-                startDate: '09 / 2023',
-                endDate: '04 / 2024',
-            },
-        ],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Spearheaded full-stack development of a gamified education platform specializing in combining learning with video games, built with <span className='font-bold'>Next.js</span>, <span className='font-bold'>React</span>, <span className='font-bold'>MongoDB</span>, and <span className='font-bold'>AWS</span>; contributed to <span className='font-bold'>$85k</span> total raised as of Jul. 2024.
-                    </p>
-                )
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Developed a real-time matchmaking system to gamify learning through competitions, utilizing <span className='font-bold'>cron jobs</span> and <span className='font-bold'>aggregate queries</span> to match student teams based on size and skill level.
-                    </p>
-                )
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Designed and implemented a parsing algorithm for a lesson editor capable of handling XML-like strings, <span className='font-bold'>LaTeX</span> formats, and various forms of media, significantly improving lesson-writing efficiency.
-                    </p>
-                )
-            }
-        ],
-        technologies: ['React.js', 'MongoDB', 'AWS', 'Next.js'],
-    },
+    // {
+    //     company: 'CIBC',
+    //     companyLink: 'https://cibc.com/',
+    //     logo: '/logos/cibc.svg',
+    //     location: 'Toronto, Ontario',
+    //     instances: [
+    //         {
+    //             subtitle: 'Software Engineer - Advanced Analytics & AI',
+    //             startDate: '01 / 2025',
+    //             endDate: '04 / 2025',
+    //         },
+    //     ],
+    //     bullets: [
+    //         {
+    //             type: 'node',
+    //             node: (
+    //                 <p>
+    //                     Built real-time chatbot features using <span className='font-bold'>Python</span>, <span className='font-bold'>Redis</span>, and <span className='font-bold'>WebSocket</span> streaming, enabling low-latency tool
+    //                     execution and interactive user experiences for CIBC's internal AI assistant
+    //                 </p>
+    //             )
+    //         },
+    //         {
+    //             type: 'node',
+    //             node: (
+    //                 <p>
+    //                     Delivered LLM-powered capabilities including live news ingestion, <span className='font-bold'>RAG</span> over patent databases, and
+    //                     sentiment classification for document triage and automated summarization
+    //                 </p>
+    //             )
+    //         },
+    //         {
+    //             type: 'node',
+    //             node: (
+    //                 <p>
+    //                    Architected a full-stack LLM prototyping framework (<span className='font-bold'>Next.js</span>, <span className='font-bold'>Prisma</span>, <span className='font-bold'>FastAPI</span>) adopted across <span className='font-bold'>10+ internal
+    //                    repositories</span>, standardizing deployment and evaluation workflows
+    //                 </p>
+    //             )
+    //         }
+    //     ],
+    //     technologies: ['Python', 'Azure Web Services', 'PostgreSQL', 'React.js', 'Django'],
+    // },
+    // {
+    //     company: 'Slime Scholars',
+    //     companyLink: 'https://slimescholars.com/',
+    //     logo: '/logos/slime-scholars.png',
+    //     location: 'Waterloo, Ontario',
+    //     instances: [
+    //         {
+    //             subtitle: 'Software Engineer',
+    //             startDate: '09 / 2023',
+    //             endDate: '04 / 2024',
+    //         },
+    //     ],
+    //     bullets: [
+    //         {
+    //             type: 'node',
+    //             node: (
+    //                 <p>
+    //                     Spearheaded full-stack development of a gamified education platform specializing in combining learning with video games, built with <span className='font-bold'>Next.js</span>, <span className='font-bold'>React</span>, <span className='font-bold'>MongoDB</span>, and <span className='font-bold'>AWS</span>; contributed to <span className='font-bold'>$85k</span> total raised as of Jul. 2024.
+    //                 </p>
+    //             )
+    //         },
+    //         {
+    //             type: 'node',
+    //             node: (
+    //                 <p>
+    //                     Developed a real-time matchmaking system to gamify learning through competitions, utilizing <span className='font-bold'>cron jobs</span> and <span className='font-bold'>aggregate queries</span> to match student teams based on size and skill level.
+    //                 </p>
+    //             )
+    //         },
+    //         {
+    //             type: 'node',
+    //             node: (
+    //                 <p>
+    //                     Designed and implemented a parsing algorithm for a lesson editor capable of handling XML-like strings, <span className='font-bold'>LaTeX</span> formats, and various forms of media, significantly improving lesson-writing efficiency.
+    //                 </p>
+    //             )
+    //         }
+    //     ],
+    //     technologies: ['React.js', 'MongoDB', 'AWS', 'Next.js'],
+    // },
 ]
