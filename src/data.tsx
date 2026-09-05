@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
         technologies: ['Next.js', 'React', 'MongoDB'],
         description: (
             <p>
-                A web application for a mutual fund with over <span className='font-bold'>$125k</span> in streamlined transactions, built on the <span className='font-bold'>Stripe API</span> with elliptic curve encryption for user data.
+                A portfolio tracker for a mutual fund that I started with my roommates, we grew it from <span className='font-bold'>$250k</span> to <span className='font-bold'>$2.0M</span> with <span className='font-bold'>65%</span> YoY retruns. I also designed the site :)
             </p>
         ),
     },

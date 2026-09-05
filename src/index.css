@@ -41,7 +41,7 @@
 :root {
   font-family: var(--font-inconsolata);
   color-scheme: light;
-  --bg: oklch(0.9803 0.0189 106.93);
+  --bg: oklch(0.9903 0.0189 106.93);
   --fg: oklch(0.2236 0.0084 240.27);
   --faded: oklch(0.5099 0.0068 229.07);
   --accent: oklch(0.6539 0.1202 170); 
