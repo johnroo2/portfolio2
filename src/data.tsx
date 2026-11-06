@@ -27,9 +27,6 @@ export const SUBTITLE_LINKS: {
   { link: '/assets/resume.pdf', title: 'resume' },
 ]
 
-export const HOME_META_DESCRIPTION =
-  "I'm studying computer science at the University of Waterloo, and I'm currently based in San Francisco working on rendering / editor infrastructure for design systems at Figma. I'm interested in solving puzzles, building performant systems, and fullstack web development."
-
 export const HOME_CONTENT: React.ReactNode = (
   <>
     <p>
@@ -60,29 +57,18 @@ export const HOME_CONTENT: React.ReactNode = (
   </>
 )
 
-type Bullet = {
-    type: 'string',
-    content: string,
-} | {
-    type: 'node',
-    node: React.ReactNode,
-}
-
 type Experience = {
     company: string,
     companyLink: string,
     logo: string,
     logoDarkInvert?: boolean,
     location: string,
-    technologies: string[],
-    
+
     instances: {
         subtitle: string,
         startDate: string,
         endDate: string,
     }[],
-
-    bullets: Bullet[],
 }
 
 type Project = {
@@ -113,7 +99,7 @@ export const PROJECTS: Project[] = [
         technologies: ['Next.js', 'React', 'MongoDB'],
         description: (
             <p>
-                A portfolio tracker for a mutual fund that I started with my roommates, we grew it from <span className='font-bold'>$250k</span> to <span className='font-bold'>$2.0M</span> with <span className='font-bold'>65%</span> YoY retruns. I also designed the site :)
+                A portfolio tracker for a mutual fund that I started with my roommates. We grew it from <span className='font-bold'>$250k</span> to <span className='font-bold'>$2.0M</span> with <span className='font-bold'>65%</span> YoY returns. I also designed the site :)
             </p>
         ),
     },
@@ -139,31 +125,37 @@ export const PROJECTS: Project[] = [
             </p>
         ),
     },
-    // {
-    //     name: 'Retrospect',
-    //     date: '07 / 2024',
-    //     link: 'https://www.retrospect.space/',
-    //     technologies: ['Swift', 'Go', 'Google Cloud'],
-    //     description: (
-    //         <p>
-    //             An app for creating and sharing digital time capsules, with media stored in <span className='font-bold'>Google Cloud</span> buckets and a social graph for discovery between friends.
-    //         </p>
-    //     ),
-    // },
-    // {
-    //     name: 'Darkest Dungeons',
-    //     date: '02 / 2023',
-    //     link: 'https://github.com/johnroo2/Darkest-Dungeons',
-    //     technologies: ['Java', 'Swing Graphics'],
-    //     description: (
-    //         <p>
-    //             A dungeon explorer, bullet hell roguelike game built in <span className='font-bold'>Java</span> with <span className='font-bold'>Swing Graphics</span>.
-    //         </p>
-    //     )
-    // }
 ]
 
-export const WORK_EXPERINCE: Experience[] = [
+export const WORK_EXPERIENCE: Experience[] = [
+    {
+        company: 'Jane Street',
+        companyLink: 'https://www.janestreet.com/',
+        logo: '/logos/jane-street.svg',
+        logoDarkInvert: true,
+        location: 'New York, New York',
+        instances: [
+            {
+                subtitle: 'Incoming Software Engineer Intern',
+                startDate: '05 / 2027',
+                endDate: '08 / 2027',
+            },
+        ],
+    },
+    {
+        company: 'Stripe',
+        companyLink: 'https://stripe.com/',
+        logo: '/logos/stripe.svg',
+        logoDarkInvert: true,
+        location: 'New York, New York',
+        instances: [
+            {
+                subtitle: 'Incoming Software Engineer Intern',
+                startDate: '01 / 2027',
+                endDate: '04 / 2027',
+            },
+        ],
+    },
     {
         company: 'Figma',
         companyLink: 'https://www.figma.com/',
@@ -172,13 +164,10 @@ export const WORK_EXPERINCE: Experience[] = [
         location: 'San Francisco, California',
         instances: [
             {
-                subtitle: 'Software Engineer - Design Systems Editor',
+                subtitle: 'Software Engineer Intern',
                 startDate: '05 / 2026',
                 endDate: '08 / 2026',
             },
-        ],
-        technologies: ['C++', 'React.js', 'TypeScript', 'WebAssembly', 'Rust'],
-        bullets: [
         ],
     },
     {
@@ -189,127 +178,10 @@ export const WORK_EXPERINCE: Experience[] = [
         location: 'Palo Alto, California',
         instances: [
             {
-                subtitle: 'Software Engineer - Product Engineering',
-                startDate: '09 / 2025',
-                endDate: '04 / 2026',
-            },
-            {
                 subtitle: 'Atlas Software Intern',
                 startDate: '05 / 2025',
                 endDate: '08 / 2025',
             },
         ],
-        bullets: [
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Owned full-stack development of an AI-powered forecasting insights platform <span className='font-bold'>(TypeScript, React, Rails)</span> used 
-                        by energy and commodities traders; contributed to <span className='font-bold'>$2.5M+ ARR</span> within 4 months of launch
-                    </p>
-                )
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                        Engineered a tropical cyclone tracking pipeline by designing storm detection algorithms in <span className='font-bold'>C++</span> over <span className='font-bold'>500TB+</span> of global gridded weather data; built a caching layer in <span className='font-bold'>Rust</span> enabling low-latency retrieval
-                    </p>
-                )
-            },
-            {
-                type: 'node',
-                node: (
-                    <p>
-                         Integrated <span className='font-bold'>LangGraph</span>-based, tool-using LLM agents to generate automated meteorological + commodity
-                         event insights; shipped a conversational UI with forecast-aware actions and internal tooling
-                    </p>
-                )
-            },
-        ],
-        technologies: ['Ruby on Rails', 'Rust', 'C++', 'React.js', 'TypeScript', 'Python'],
     },
-    // {
-    //     company: 'CIBC',
-    //     companyLink: 'https://cibc.com/',
-    //     logo: '/logos/cibc.svg',
-    //     location: 'Toronto, Ontario',
-    //     instances: [
-    //         {
-    //             subtitle: 'Software Engineer - Advanced Analytics & AI',
-    //             startDate: '01 / 2025',
-    //             endDate: '04 / 2025',
-    //         },
-    //     ],
-    //     bullets: [
-    //         {
-    //             type: 'node',
-    //             node: (
-    //                 <p>
-    //                     Built real-time chatbot features using <span className='font-bold'>Python</span>, <span className='font-bold'>Redis</span>, and <span className='font-bold'>WebSocket</span> streaming, enabling low-latency tool
-    //                     execution and interactive user experiences for CIBC's internal AI assistant
-    //                 </p>
-    //             )
-    //         },
-    //         {
-    //             type: 'node',
-    //             node: (
-    //                 <p>
-    //                     Delivered LLM-powered capabilities including live news ingestion, <span className='font-bold'>RAG</span> over patent databases, and
-    //                     sentiment classification for document triage and automated summarization
-    //                 </p>
-    //             )
-    //         },
-    //         {
-    //             type: 'node',
-    //             node: (
-    //                 <p>
-    //                    Architected a full-stack LLM prototyping framework (<span className='font-bold'>Next.js</span>, <span className='font-bold'>Prisma</span>, <span className='font-bold'>FastAPI</span>) adopted across <span className='font-bold'>10+ internal
-    //                    repositories</span>, standardizing deployment and evaluation workflows
-    //                 </p>
-    //             )
-    //         }
-    //     ],
-    //     technologies: ['Python', 'Azure Web Services', 'PostgreSQL', 'React.js', 'Django'],
-    // },
-    // {
-    //     company: 'Slime Scholars',
-    //     companyLink: 'https://slimescholars.com/',
-    //     logo: '/logos/slime-scholars.png',
-    //     location: 'Waterloo, Ontario',
-    //     instances: [
-    //         {
-    //             subtitle: 'Software Engineer',
-    //             startDate: '09 / 2023',
-    //             endDate: '04 / 2024',
-    //         },
-    //     ],
-    //     bullets: [
-    //         {
-    //             type: 'node',
-    //             node: (
-    //                 <p>
-    //                     Spearheaded full-stack development of a gamified education platform specializing in combining learning with video games, built with <span className='font-bold'>Next.js</span>, <span className='font-bold'>React</span>, <span className='font-bold'>MongoDB</span>, and <span className='font-bold'>AWS</span>; contributed to <span className='font-bold'>$85k</span> total raised as of Jul. 2024.
-    //                 </p>
-    //             )
-    //         },
-    //         {
-    //             type: 'node',
-    //             node: (
-    //                 <p>
-    //                     Developed a real-time matchmaking system to gamify learning through competitions, utilizing <span className='font-bold'>cron jobs</span> and <span className='font-bold'>aggregate queries</span> to match student teams based on size and skill level.
-    //                 </p>
-    //             )
-    //         },
-    //         {
-    //             type: 'node',
-    //             node: (
-    //                 <p>
-    //                     Designed and implemented a parsing algorithm for a lesson editor capable of handling XML-like strings, <span className='font-bold'>LaTeX</span> formats, and various forms of media, significantly improving lesson-writing efficiency.
-    //                 </p>
-    //             )
-    //         }
-    //     ],
-    //     technologies: ['React.js', 'MongoDB', 'AWS', 'Next.js'],
-    // },
 ]

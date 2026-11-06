@@ -1,20 +1,4 @@
 @font-face {
-  font-family: "Raleway";
-  src: url("/fonts/raleway/Raleway-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Raleway";
-  src: url("/fonts/raleway/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Inconsolata";
   src: url("/fonts/inconsolata/Inconsolata-VariableFont.ttf") format("truetype");
   font-weight: 200 900;
@@ -28,10 +12,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-raleway: "Raleway", ui-sans-serif, system-ui, sans-serif;
-  --font-inconsolata: "Inconsolata", ui-monospace, monospace;
-  --font-sans: var(--font-raleway);
-  --font-mono: var(--font-inconsolata);
+  --font-mono: "Inconsolata", ui-monospace, monospace;
   --color-background: var(--bg);
   --color-foreground: var(--fg);
   --color-faded: var(--faded);
@@ -39,7 +20,6 @@
 }
 
 :root {
-  font-family: var(--font-inconsolata);
   color-scheme: light;
   --bg: oklch(0.9903 0.0189 106.93);
   --fg: oklch(0.2236 0.0084 240.27);
@@ -59,23 +39,13 @@
   @apply underline decoration-dashed decoration-1 underline-offset-3;
 }
 
-@utility list-hollow {
-  list-style-type: circle;
-}
-
 @utility row-aside {
   @apply text-faded lg:ml-auto lg:shrink-0 max-lg:-mt-1.5 text-sm;
 }
 
-@utility company-hover {
-  &:has(.company-link:hover) .company-title {
-    @apply text-accent ul-style;
-  }
-}
-
 @layer base {
   html {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-mono antialiased;
   }
 
   body {

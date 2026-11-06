@@ -55,7 +55,7 @@ export function Layout({ page, children }: LayoutProps) {
             <h1 className="text-2xl lg:text-3xl font-semibold whitespace-nowrap">
               {tabData.header}
             </h1>
-            <ConsoleTypedText text={tabData.subtitle} />
+            <ConsoleTypedText key={page} text={tabData.subtitle} />
           </div>
           {page === Tab.HOME && (
             <div

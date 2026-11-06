@@ -4,25 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Liu</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href="https://john-liu.dev/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="John Liu" />
     <meta property="og:title" content="John Liu" />
     <meta property="og:url" content="https://john-liu.dev/" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://john-liu.dev/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="John Liu" />
+    <meta name="twitter:image" content="https://john-liu.dev/og-image.png" />
     <meta name="description" content="I'm studying computer science at the University of Waterloo, and I'm currently based in San Francisco working on rendering / editor infrastructure for design systems at Figma. I'm interested in solving puzzles, building performant systems, and fullstack web development." />
     <meta property="og:description" content="I'm studying computer science at the University of Waterloo, and I'm currently based in San Francisco working on rendering / editor infrastructure for design systems at Figma. I'm interested in solving puzzles, building performant systems, and fullstack web development." />
     <meta name="twitter:description" content="I'm studying computer science at the University of Waterloo, and I'm currently based in San Francisco working on rendering / editor infrastructure for design systems at Figma. I'm interested in solving puzzles, building performant systems, and fullstack web development." />
     <link rel="preload" href="/fonts/inconsolata/Inconsolata-VariableFont.ttf" as="font" type="font/ttf" crossorigin>
-    <script>
-      (function () {
-        var stored = localStorage.getItem('theme')
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-        var theme = stored === 'dark' || stored === 'light' ? stored : prefersDark ? 'dark' : 'light'
-        if (theme === 'dark') document.documentElement.classList.add('dark')
-      })()
-    </script>
+    <script src="/theme.js"></script>
   </head>
   <body>
     <div id="root"></div>

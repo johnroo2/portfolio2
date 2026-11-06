@@ -2,8 +2,8 @@ import { Tab } from '@/data'
 
 export const PAGE_PATHS: Record<Tab, string> = {
   [Tab.HOME]: '/',
-  [Tab.WORK]: '/work.html',
-  [Tab.PROJECTS]: '/project.html',
+  [Tab.WORK]: '/work',
+  [Tab.PROJECTS]: '/project',
 }
 
 export const PAGE_TITLES: Record<Tab, string> = {
