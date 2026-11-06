@@ -22,17 +22,17 @@
 :root {
   color-scheme: light;
   --bg: oklch(0.9903 0.0189 106.93);
-  --fg: oklch(0.2236 0.0084 240.27);
-  --faded: oklch(0.5099 0.0068 229.07);
-  --accent: oklch(0.6539 0.1202 170); 
+  --fg: oklch(15.8% 0.0106 294.32);
+  --faded: oklch(43.2% 0.0091 186.55);
+  --accent: oklch(55.45% 0.1036 169.59); 
 }
 
 .dark {
   color-scheme: dark;
-  --bg: oklch(0.2135 0.0085 223.89);
-  --fg: oklch(0.9471 0.0109 182.87);
-  --faded: oklch(0.789 0.008 177.31); 
-  --accent: oklch(0.6539 0.1202 213.35); 
+  --bg: oklch(26.22% 0.0246 298.79);
+  --fg: oklch(94.52% 0.011 211.04);
+  --faded: oklch(81.67% 0.0159 212.01); 
+  --accent: oklch(73.17% 0.1216 211.54); 
 }
 
 @utility ul-style {
